@@ -5,13 +5,13 @@ def generate_mission_summary(missions):
     complete = len([m for m in missions if m["status"] == "Complete"])
 
     report = f"""
-=== MISSION INTELLIGENCE SUMMARY ===
-Total Missions: {total}
-Active Missions: {active}
-Completed Missions: {complete}
-Pending Missions: {total - active - complete}
-==================================
-"""
+    === MISSION INTELLIGENCE SUMMARY ===
+    Total Missions: {total}
+    Active Missions: {active}
+    Completed Missions: {complete}
+    Pending Missions: {total - active - complete}
+    ==================================
+   """
     return report.strip()
 
 
@@ -21,12 +21,12 @@ def generate_personnel_report(personnel):
     top_secret = len([p for p in personnel if p["clearance"] == "Top Secret"])
 
     report = f"""
-=== PERSONNEL SUMMARY ===
-Total Personnel: {total}
-Top Secret Clearance: {top_secret}
-Regular Clearance: {total - top_secret}
-========================
-"""
+    === PERSONNEL SUMMARY ===
+    Total Personnel: {total}
+    Top Secret Clearance: {top_secret}
+    Regular Clearance: {total - top_secret}
+    ========================
+    """
     return report.strip()
 
 
